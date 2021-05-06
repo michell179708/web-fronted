@@ -7,25 +7,167 @@
 <body>
 <input id="NumberOne" type="number">
 <input id="NumberTwo" type="number">
-<button id="AddButton" onclick="input()">+</button>
-<button id="SubtractButton" onclick="restar()">-</button>
-<button id="MultiplyButton" onclick="input()">*</button>
-<button id="DivideButton" onclick="input()">/</button>
+<button id="AddButton" onclick="process('+')">+</button>
+<button id="SubtractButton" onclick="process('-')">-</button>
+<button id="MultiplyButton" onclick="process('*')">*</button>
+<button id="DivideButton" onclick="process('/')">/</button>
 <div id="content">
 
 </div>
 <script>
-    function restar(){
+    function process(operator){
+        let numberOneInput = document.getElementById("NumberOne");
+        let numberTwoInput = document.getElementById("NumberTwo");
+
+        let one = parseInt(numberOneInput.value);
+        let two = parseInt(numberTwoInput.value);
+
+        operation(alert, operator, one, two);
+    }
+
+    function operation(callback, operator, one, two){
+        let result = 0;
+
+        switch (operator){
+            case '+':
+                result = one + two;
+                break;
+            case '-':
+                result = one - two;
+                break;
+            case '*':
+                result = one * two;
+                break;
+            case '/':
+                result = one / two;
+                break;
+        }
+
+        callback(result);
+    }
+
+    function displayToDocument(result) {
+        let content = document.getElementById("content");
+        content.innerText = result;
+    }
+
+    function displayAsAlert(result) {
+        alert(result);
+    }
+
+    // function add(){
+    //     let numberOneInput = document.getElementById("NumberOne");
+    //     let numberTwoInput = document.getElementById("NumberTwo");
+    //     let content = document.getElementById("content");
+    //
+    //     let one = parseInt(numberOneInput.value);
+    //     let two = parseInt(numberTwoInput.value);
+    //     let result = one + two;
+    //
+    //     content.innerText = result;
+    // }
+    //
+    // function divide(){
+    //     let numberOneInput = document.getElementById("NumberOne");
+    //     let numberTwoInput = document.getElementById("NumberTwo");
+    //     let content = document.getElementById("content");
+    //
+    //     let one = parseInt(numberOneInput.value);
+    //     let two = parseInt(numberTwoInput.value);
+    //     let result = one / two;
+    //
+    //     content.innerText = result;
+    // }
+    //
+    // function multiply(){
+    //     let numberOneInput = document.getElementById("NumberOne");
+    //     let numberTwoInput = document.getElementById("NumberTwo");
+    //     let content = document.getElementById("content");
+    //
+    //     let one = parseInt(numberOneInput.value);
+    //     let two = parseInt(numberTwoInput.value);
+    //     let result = one * two;
+    //
+    //     content.innerText = result;
+    // }
+    //
+    // function subtract(){
+    //     let numberOneInput = document.getElementById("NumberOne");
+    //     let numberTwoInput = document.getElementById("NumberTwo");
+    //     let content = document.getElementById("content");
+    //
+    //     let one = parseInt(numberOneInput.value);
+    //     let two = parseInt(numberTwoInput.value);
+    //     let result = one - two;
+    //
+    //     content.innerText = result;
+    // }
+</script>
+</body>
+</html>
+
+
+<!-- Step 1
+<input id="TextInput" type="text">
+<button id="ButtonSubmit" onclick="input()">Submit</button>
+<div id="content">
+
+</div>
+<script>
+    function input(){
+        let text = document.getElementById("TextInput");
+
+        let content = document.getElementById("content");
+        content.innerText = text.value;
+    }
+</script>
+
+-->
+
+<!-- Step 2
+
+<input id="TextInput" type="number">
+<button id="ButtonSubmit" onclick="input()">Submit</button>
+<div id="content">
+
+</div>
+<script>
+    function input(){
+        let text = document.getElementById("TextInput");
+        let content = document.getElementById("content");
+        let upTo = parseInt(text.value);
+        let total = 0;
+
+        for (let i = 0; i <= upTo; i++){
+            total += i;
+        }
+
+        content.innerText = total;
+    }
+</script>
+
+-->
+
+<!--
+
+<input id="NumberOne" type="number">
+<input id="NumberTwo" type="number">
+<button id="ButtonSubmit" onclick="input()">Submit</button>
+<div id="content">
+
+</div>
+<script>
+    function input(){
         let numberOneInput = document.getElementById("NumberOne");
         let numberTwoInput = document.getElementById("NumberTwo");
         let content = document.getElementById("content");
 
         let one = parseInt(numberOneInput.value);
         let two = parseInt(numberTwoInput.value);
-        let result = one - two;
+        let result = one + two;
 
         content.innerText = result;
     }
 </script>
-</body>
-</html>
+
+-->
