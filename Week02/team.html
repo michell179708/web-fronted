@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W02 Team Activity</title>
+</head>
+<body>
+<input id="NumberOne" type="number">
+<input id="NumberTwo" type="number">
+<button id="AddButton" onclick="input()">+</button>
+<button id="SubtractButton" onclick="restar()">-</button>
+<button id="MultiplyButton" onclick="input()">*</button>
+<button id="DivideButton" onclick="input()">/</button>
+<div id="content">
+
+</div>
+<script>
+    function restar(){
+        let numberOneInput = document.getElementById("NumberOne");
+        let numberTwoInput = document.getElementById("NumberTwo");
+        let content = document.getElementById("content");
+
+        let one = parseInt(numberOneInput.value);
+        let two = parseInt(numberTwoInput.value);
+        let result = one - two;
+
+        content.innerText = result;
+    }
+</script>
+</body>
+</html>
