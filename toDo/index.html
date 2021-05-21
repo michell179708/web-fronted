@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../toDo/css/normalize.css">
+    <link rel="stylesheet" href="../toDo/css/style.css">
+     <link rel="stylesheet" href="../toDo/scss/style.scss">
+    <title>To Do App</title>
+</head>
+<body>
+   <header>
+       <h1 class="position">Your TO DO! App</h1>
+       <picture>
+        <source media="min-width:500px" srcset="../imagen/small500.jpg">
+        <source media="max-width:800px" srcset="../imagen/medium800.jpg">
+         <img src="../toDo/imagen/header-imagen.jpg" alt="imagen header" class="imagen-header">
+       </picture>
+       <div id="date" class="date"></div>
+   </header>
+
+   <div class="container">
+    <p><label for="new-task">Create your list</label>
+    <input type="text" id="new-task"><button>Add Task</button>
+    </p>
+    
+    <h3>Things to do</h3>
+     <h3>Completed Task</h3>
+     <ul id="completed-task"></ul>
+     
+     <footer>
+        <h3>Filter your task</h3>
+         <button>Show your task</button> <button>Filter your task</button>
+     </footer>
+   </div>
+ <script src="../toDo/js/date.js"></script>
+ <script src="../toDo/js/toDoApp.js"></script>
+
+</body>
+</html>
