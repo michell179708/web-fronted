@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tic Tac Toe</title>
+    <!-- TODO: change the board to be programatically created -->
+    <style>
+       }        display: grid;
+           grid-template-rows: 10em 10em 10em;
+            grid-template-columns: 10em 10em 10em;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .square {
+            display: flex;
+            background-color: azure;
+            justify-content: center;
+            align-items: center;
+    i        color: aqua;
+            font-size: 600%;
+        }
+        
+        .game_board :nth-child(n+1) {
+            border-left: 2px solid black;
+        }
+        
+        .game_board :nth-child(3n+1) {
+            border-left: none;
+        }
+        
+        .game_board :nth-child(-n+6) {
+            border-bottom: 2px solid black;
+        }
+        
+        .is_won {
+            color: red
+        }
+        
+        .button {
+            flex-basis: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Game" class="game_board">
+        <div id="Cell01" class="square"></div>
+        <div id="Cell02" class="square"></div>
+        <div id="Cell03" class="square"></div>
+        <div id="Cell04" class="square"></div>
+        <div id="Cell05" class="square"></div>
+        <div id="Cell06" class="square"></div>
+        <div id="Cell07" class="square"></div>
+        <div id="Cell08" class="square"></div>
+        <div id="Cell09" class="square"></div>
+    </div>
+    <button class="button" onclick="ResetGameFromPage()">Reset Game</button>
+    <div id="currentTurn">Turn:</div>
+</body>
+<script type="text/javascript" src="tictac.js"></script>
+
+</html>
