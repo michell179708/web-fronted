@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../toDo/css/normalize.css">
     <link rel="stylesheet" href="../toDo/css/style.css">
-     <link rel="stylesheet" href="../toDo/scss/style.scss">
-    <title>To Do App</title>
+    <title>ToDo Program</title>
 </head>
 <body>
-   <header>
-       <h1 class="position">Your TO DO! App</h1>
-       <picture>
-        <source media="min-width:500px" srcset="../imagen/small500.jpg">
-        <source media="max-width:800px" srcset="../imagen/medium800.jpg">
-         <img src="../toDo/imagen/header-imagen.jpg" alt="imagen header" class="imagen-header">
-       </picture>
-       <div id="date" class="date"></div>
-   </header>
+  <div class="container">
+ <div id="myDIV" class="header">
+  <h2 class="title">My To Do App</h2><h2>Today is: <span id="date"></span></h2>
+   <label class="title">Add your task</label>
+  <input type="text" id="new-task" placeholder="add a task" class="add-task">
+  <span onclick="newElement()" class="button-task">Add</span>
+</div>
+<div class="container-list">
+<ul id="list">
+ <label class="title">Your task</label>
+  <div class="task">
 
-   <div class="container">
-    <p><label for="new-task">Create your list</label>
-    <input type="text" id="new-task"><button>Add Task</button>
-    </p>
+  </div>
+</ul>
+    </div>
     
-    <h3>Things to do</h3>
-     <h3>Completed Task</h3>
-     <ul id="completed-task"></ul>
-     
-     <footer>
-        <h3>Filter your task</h3>
-         <button>Show your task</button> <button>Filter your task</button>
-     </footer>
-   </div>
- <script src="../toDo/js/date.js"></script>
- <script src="../toDo/js/toDoApp.js"></script>
-
+    <footer class="filter">
+      <label class="title">Your filter task</label>
+      <div class="container-filter">
+      <div id="total-task">
+        Total task: <span id="total_task">0</span>
+      </div>
+        <div id="completed-task">
+        Completed task: <span id="completed_task">0</span>
+      </div>
+        <div id="remaining-task">
+        Remaining task: <span id="remaining_task">0</span>
+      </div>
+        <div>
+    </footer>
+  </div>
+  <script src="../toDo/js/toDoApp.js"></script>
+  <script src="../toDo/js/date.js"></script>
 </body>
 </html>
