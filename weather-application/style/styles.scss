@@ -1,0 +1,23 @@
+//import typography
+$font-one:'Amatic SC', cursive;
+$font-two:'Josefin Sans', sans-serif;
+$family-one: unquote("Amatic+SC:wght@700&");
+$family-two: unquote("Josefin+Sans:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=#{$family-one}family=#{$family-two}');
+//color variables
+$color-one: #033246;
+$color-two: #07575B;
+$color-thirth: #66A5AD;
+$color-four:#C4DEF6;
+$color-five:#f2cc8f;
+//other variables
+$width-logo:200px;
+$width-font:2em;
+
+//style for the logo and the title of the application
+.logo{
+width:$width-logo;
+}
+.header-title{
+font-family:$font-two;
+}
