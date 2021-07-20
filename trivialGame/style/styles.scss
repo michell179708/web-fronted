@@ -1,0 +1,69 @@
+//import typography
+$font-one:'Amatic SC', cursive;
+$font-two:'Josefin Sans', sans-serif;
+$family-one: unquote("Amatic+SC:wght@700&");
+$family-two: unquote("Josefin+Sans:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=#{$family-one}family=#{$family-two}');
+//color variables
+$color-one: #033246;
+$color-two: #07575B;
+$color-thirth: #66A5AD;
+$color-four:#C4DEF6;
+$color-five:#f2cc8f;
+$color-six:#adb5bd;
+
+h1{
+ font-family: $font-one;
+ text-align: center;
+ font-size: 2.5em;
+}
+.right{
+    background: $color-thirth;
+    padding: 1em;
+}
+.wrong{
+    background: $color-five;
+    padding: 1em;
+}
+.answer{
+    font-family: $font-two;
+    font-size: 1.3em;
+}
+.question{
+    font-family: $font-two;
+    font-size: 1.5em;
+}
+
+.buttonEvaluate{
+    font-family: $font-two;
+    border: none;
+    background-color:$color-six ;
+    border-radius: 5px;
+    padding: 1em;
+    transform: translateY(4px);
+}
+.buttonEvaluate:hover{
+    background-color: $color-four;
+}
+.container-contador{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1em;
+}
+.contador-parafo{
+    font-family: $font-two;
+    font-size: 1.3em;
+}
+.buttons{
+    font-family: $font-two;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: $color-one;
+    padding: 0.7em;
+    transform:translateY(4px);
+}
+.buttons:hover{
+    background-color: $color-thirth;
+}

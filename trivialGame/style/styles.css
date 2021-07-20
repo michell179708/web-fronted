@@ -1,6 +1,67 @@
-.right{
-    background: palegreen;
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans:wght@200&display=swap");
+h1 {
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 2.5em;
 }
-.wrong{
-    background: salmon;
+
+.right {
+  background: #66A5AD;
+  padding: 1em;
 }
+
+.wrong {
+  background: #f2cc8f;
+  padding: 1em;
+}
+
+.answer {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+}
+
+.question {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5em;
+}
+
+.buttonEvaluate {
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  background-color: #adb5bd;
+  border-radius: 5px;
+  padding: 1em;
+  transform: translateY(4px);
+}
+
+.buttonEvaluate:hover {
+  background-color: #C4DEF6;
+}
+
+.container-contador {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.contador-parafo {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+}
+
+.buttons {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #033246;
+  padding: 0.7em;
+  transform: translateY(4px);
+}
+
+.buttons:hover {
+  background-color: #66A5AD;
+}
+
+/*# sourceMappingURL=styles.css.map */

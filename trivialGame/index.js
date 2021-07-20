@@ -2,7 +2,7 @@
 //a global variable to evaluate our answer
  let rightAnswer;
  let currentQuestionIndex = 0;
- let previousQuestion = 0;
+ 
  let rightAnswers = 0;
  let wrongAsnwers = 0;
  const cuestionary = [
@@ -22,12 +22,12 @@
 //print our question and answer ,  to do that we will create a function.
 const printHTMLQuestion = (i) =>{
     currentQuestionIndex ++;
-    previousQuestion --;
+    
     const q = cuestionary[i];
     let a = q.answer;
     rightAnswer = a[0];
 
-    const htmlAnswerArray = a.map( currentA => `<p class="answer"><button onClick="evaluateAnswers('${currentA}', this)">X</button> <span>${currentA}</span></p>`);
+    const htmlAnswerArray = a.map( currentA => `<p class="answer"><button class="buttonEvaluate" onClick="evaluateAnswers('${currentA}', this)">X</button> <span>${currentA}</span></p>`);
     const htmlAnswer = htmlAnswerArray.join(' ');
     let HTMLquestionCode = `<p>${q.question}</p><div>${htmlAnswer}</div>`;
 
@@ -53,10 +53,12 @@ const nextQuestion = _  =>{
 
 }
 
-const prevQuestion = _ =>{
-    
+const comebackPage = _ =>{
+    const q = cuestionary.question[0];
+  
 }
 
 printHTMLQuestion(currentQuestionIndex);
+
 
 

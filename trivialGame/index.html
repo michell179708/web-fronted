@@ -12,13 +12,15 @@
     <title>Trivial Game</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Trivia Game</h1>
     <div class="question"></div>
-    <p>Right Answers: <span class="rightA">0</span> </p>
-    <p>Wrong Asnwers <span class="wrongA">0</span> </p>
-
-    <button onclick="printHTMLQuestion(previousQuestion)">Previous Question</button>
-    <button onclick="printHTMLQuestion(currentQuestionIndex)">Next Question</button>
+    <div class="container-contador">
+    <p class="contador-parafo">Right Answers: <span class="rightA">0</span> </p>
+    <p class="contador-parafo">Wrong Asnwers <span class="wrongA">0</span> </p>
+    
+    <button class="buttons" onclick="comebackPage(q)">First Question</button>
+    <button class="buttons" onclick="printHTMLQuestion(currentQuestionIndex)">Next Question</button>
+    </div>
 </body>
 <script src="./index.js"></script>
 </html>
