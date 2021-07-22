@@ -10,14 +10,118 @@ $color-two: #07575B;
 $color-thirth: #66A5AD;
 $color-four:#C4DEF6;
 $color-five:#f2cc8f;
+$color-six:#adb5bd;
 //other variables
-$width-logo:200px;
+$width-logo:60px;
 $width-font:2em;
-
+//mixin
+@mixin clear {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix::after{
+  @include clear();
+}
 //style for the logo and the title of the application
+.container-logo{
+  background-color: $color-six;
+  padding: 1em;
+}
+
 .logo{
-width:$width-logo;
+    width:$width-logo;
+    padding-left:0.5em;
+    padding-top: 1em;
 }
 .header-title{
-font-family:$font-two;
+   float: left; 
+  font-family: $font-one;
+  font-size: $width-font;
+
+
+}
+nav{
+ font-size: 1.5em;
+ background-color:$color-one;
+ font-family:$font-two;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a{
+  display: block;
+  padding: .8rem 2%;
+  text-decoration: none;
+  color: white;
+  
+}
+nav ul li a:hover{
+  background-color: $color-four ;
+}
+.container{
+  margin: $width-font;
+  margin-left: 1em;
+}
+section{
+  .paragraph-weather{
+    font-family: $font-two;
+    font-size: 1.5em;
+  }
+  .paragraph{
+    font-family: $font-two;
+    font-size: 1.5em;
+  }
+}
+.weather-section{
+background-color: $color-thirth;
+padding: 1em;
+border: 1px solid black;
+}
+
+   div#five-day{
+    display: block;
+  
+    
+  }
+  
+  img.iconTable{
+     width:5em;
+     padding:2em;
+     margin-left: 2em;
+     
+  }
+  
+  
+  
+  .color-table{
+     background-color: $color-thirth;
+     font-family: $font-two;
+     text-align: center;
+  }
+
+  .fiveday-forecast{
+    max-width: 100%;
+  }
+.paragraph-forecast{
+  font-family: $font-two;
+  font-size: 1.3em;
+  text-align: left;
+
+}
+.fiveday-forecast{
+  margin-left: 20em;
+}
+.paragraph-footer{
+  font-family: $font-two;
+  font-size: 1.3em;
+  text-align: center;
+}
+.footer{
+  background-color: $color-six;
+  padding: 3px;
 }

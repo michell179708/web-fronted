@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +7,19 @@
     <!--Links for icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--link for the precessor SASS-->
-    <link rel="stylesheet" href="/weather-application/styles.scss">
+    <link rel="stylesheet" href="/weather-application/style/styles.scss">
     <!---Link for the style CSS-->
-    <link rel="stylesheet" href="/weather-application/styles.css">
+    <link rel="stylesheet" href="/weather-application/style/styles.css">
     <!---Link for the favicon app-->
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEdDAK+q0yB9N5l4fjiaPr442j9+ONo/fjjaP3442j9+ONo/fjjaP344mf69N5m4cGuToElIA4CAAAAAAAAAAC+pUmB/eFm//3hZv/94Wb//eFm//3hZv/94Wb//eFm//3hZv/94Wb//eFm//3hZv/94Wb/w6pLgQAAAAAAAAAA8c5b4fzXYP/812D//Ndg//zXYP/812D//Ndg//zXYP/812D//Ndg//zXYP/812D//Ndg//LOXOEAAAAAAAAAAPTHV/r6zFn/+sxZ//rMWv/71nj/+9h9//vYff/72H7/+9h+//vYff/7z2L/+sxZ//rMWf/0x1f6AAAAAAAAAADzvFD9+cBS//nAUv/85rr///37///9+////fv///37///9+////fv//vnu//rMcv/5wFL/87xQ/QAAAAAAAAAA8q9J/fezS//3s0r//fLh//r79f/9+vP///ry///68v//+vL///ry///68v/84bb/97NK//KvSf0AAAAAAAAAAPCjQf32pkP/ubpz/2/z9P/Y/v//4/7+//X58f/+9uv//vbr//726//+9uv/+9ao//amQ//wo0H9AAAAAAAAAADvljr985k8/yXf5/8K6P7/evP+/9r8///d/P3//fPl//7z5P/+8+T//OLF//WkT//0mjv/75Y6/QAAAAAAAAAA7Yoz/eaRPf8K2/3/Ctv+/yjg/v/J+P7/1Pr///nw4v/96NX/9J1Q//KNNP/yjTT/8o00/+2KM/0AAAAAAAAAAOt+LP3xgS3/N8DT/wrP/v8Kz/7/J9X+/47b5f/3uIj/8o9F//GBLf/xgS3/8YEt//GBLf/rfiz9AAAAAAAAAADqcyb673Yn/86BRf8+s8v/DMT6/zi10f/GhE3/73Yn/+92J//vdif/73Yn/+92J//vdif/6nMm+gAAAAAAAAAA5Gkh4e1sIv/tbCL/7Wwi/+1sIv/tbCL/7Wwi/+1sIv/tbCL/7Wwi/+1sIv/tbCL/7Wwi/+VpIOEAAAAAAAAAALVPF4HsZB3/7GQd/+xkHf/sZB3/7GQd/+xkHf/sZB3/7GQd/+xkHf/sZB3/7GQd/+xkHf+6UReBAAAAAAAAAAAjDwQCt0sUgeNaGeHmWxn65lsZ/eZbGf3mXBn95lsZ/eZbGf3mWxr95lsZ+uNbGeG5TBWBJhAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAADAAwAA//8AAA==" rel="icon" type="image/x-icon" />
     <title>Bilbao</title>
 
 </head>
 <div class="container-logo">
-    <img class="logo" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ4MHB0IiB2aWV3Qm94PSIwIDAgNDgwIDQ4MCIgd2lkdGg9IjQ4MHB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZGQwMjAiPjxwYXRoIGQ9Im0zNzYgMjQwYzAgNzUuMTA5Mzc1LTYwLjg5MDYyNSAxMzYtMTM2IDEzNnMtMTM2LTYwLjg5MDYyNS0xMzYtMTM2IDYwLjg5MDYyNS0xMzYgMTM2LTEzNiAxMzYgNjAuODkwNjI1IDEzNiAxMzZ6bTAgMCIvPjxwYXRoIGQ9Im0yNDAgNDgwYy00LjQxNzk2OSAwLTgtMy41ODIwMzEtOC04di02NGMwLTQuNDE3OTY5IDMuNTgyMDMxLTggOC04czggMy41ODIwMzEgOCA4djY0YzAgNC40MTc5NjktMy41ODIwMzEgOC04IDh6bTAgMCIvPjxwYXRoIGQ9Im0yNDAgODBjLTQuNDE3OTY5IDAtOC0zLjU4MjAzMS04LTh2LTY0YzAtNC40MTc5NjkgMy41ODIwMzEtOCA4LThzOCAzLjU4MjAzMSA4IDh2NjRjMCA0LjQxNzk2OS0zLjU4MjAzMSA4LTggOHptMCAwIi8+PHBhdGggZD0ibTEyMCAxMjAtNDgtNDgiLz48cGF0aCBkPSJtMTIwIDEyOGMtMi4xMjEwOTQgMC00LjE1NjI1LS44NDM3NS01LjY1NjI1LTIuMzQzNzVsLTQ4LTQ4Yy0zLjAzMTI1LTMuMTQwNjI1LTIuOTg4MjgxLTguMTI4OTA2LjA5NzY1Ni0xMS4yMTQ4NDQgMy4wODU5MzgtMy4wODU5MzcgOC4wNzQyMTktMy4xMjg5MDYgMTEuMjE0ODQ0LS4wOTc2NTZsNDggNDhjMi4yODUxNTYgMi4yODkwNjIgMi45NzI2NTYgNS43MzA0NjkgMS43MzQzNzUgOC43MTg3NXMtNC4xNTYyNSA0LjkzNzUtNy4zOTA2MjUgNC45Mzc1em0wIDAiLz48cGF0aCBkPSJtNDA4IDQwOC00OC00OCIvPjxwYXRoIGQ9Im00MDggNDE2Yy0yLjEyMTA5NCAwLTQuMTU2MjUtLjg0Mzc1LTUuNjU2MjUtMi4zNDM3NWwtNDgtNDhjLTMuMDMxMjUtMy4xNDA2MjUtMi45ODgyODEtOC4xMjg5MDYuMDk3NjU2LTExLjIxNDg0NCAzLjA4NTkzOC0zLjA4NTkzNyA4LjA3NDIxOS0zLjEyODkwNiAxMS4yMTQ4NDQtLjA5NzY1Nmw0OCA0OGMyLjI4NTE1NiAyLjI4OTA2MiAyLjk3MjY1NiA1LjczMDQ2OSAxLjczNDM3NSA4LjcxODc1cy00LjE1NjI1IDQuOTM3NS03LjM5MDYyNSA0LjkzNzV6bTAgMCIvPjxwYXRoIGQ9Im0zNjAgMTIwIDQ4LTQ4Ii8+PHBhdGggZD0ibTM2MCAxMjhjLTMuMjM0Mzc1IDAtNi4xNTIzNDQtMS45NDkyMTktNy4zOTA2MjUtNC45Mzc1cy0uNTUwNzgxLTYuNDI5Njg4IDEuNzM0Mzc1LTguNzE4NzVsNDgtNDhjMy4xNDA2MjUtMy4wMzEyNSA4LjEyODkwNi0yLjk4ODI4MSAxMS4yMTQ4NDQuMDk3NjU2IDMuMDg1OTM3IDMuMDg1OTM4IDMuMTI4OTA2IDguMDc0MjE5LjA5NzY1NiAxMS4yMTQ4NDRsLTQ4IDQ4Yy0xLjUgMS41LTMuNTM1MTU2IDIuMzQzNzUtNS42NTYyNSAyLjM0Mzc1em0wIDAiLz48cGF0aCBkPSJtNDcyIDI0OGgtNjRjLTQuNDE3OTY5IDAtOC0zLjU4MjAzMS04LThzMy41ODIwMzEtOCA4LThoNjRjNC40MTc5NjkgMCA4IDMuNTgyMDMxIDggOHMtMy41ODIwMzEgOC04IDh6bTAgMCIvPjxwYXRoIGQ9Im03MiAyNDhoLTY0Yy00LjQxNzk2OSAwLTgtMy41ODIwMzEtOC04czMuNTgyMDMxLTggOC04aDY0YzQuNDE3OTY5IDAgOCAzLjU4MjAzMSA4IDhzLTMuNTgyMDMxIDgtOCA4em0wIDAiLz48cGF0aCBkPSJtNzIgNDA4IDQ4LTQ4Ii8+PHBhdGggZD0ibTcyIDQxNmMtMy4yMzQzNzUgMC02LjE1MjM0NC0xLjk0OTIxOS03LjM5MDYyNS00LjkzNzVzLS41NTA3ODEtNi40Mjk2ODggMS43MzQzNzUtOC43MTg3NWw0OC00OGMzLjE0MDYyNS0zLjAzMTI1IDguMTI4OTA2LTIuOTg4MjgxIDExLjIxNDg0NC4wOTc2NTYgMy4wODU5MzcgMy4wODU5MzggMy4xMjg5MDYgOC4wNzQyMTkuMDk3NjU2IDExLjIxNDg0NGwtNDggNDhjLTEuNSAxLjUtMy41MzUxNTYgMi4zNDM3NS01LjY1NjI1IDIuMzQzNzV6bTAgMCIvPjwvZz48L3N2Zz4=" />
+ <img class="logo" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ4MHB0IiB2aWV3Qm94PSIwIDAgNDgwIDQ4MCIgd2lkdGg9IjQ4MHB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZGQwMjAiPjxwYXRoIGQ9Im0zNzYgMjQwYzAgNzUuMTA5Mzc1LTYwLjg5MDYyNSAxMzYtMTM2IDEzNnMtMTM2LTYwLjg5MDYyNS0xMzYtMTM2IDYwLjg5MDYyNS0xMzYgMTM2LTEzNiAxMzYgNjAuODkwNjI1IDEzNiAxMzZ6bTAgMCIvPjxwYXRoIGQ9Im0yNDAgNDgwYy00LjQxNzk2OSAwLTgtMy41ODIwMzEtOC04di02NGMwLTQuNDE3OTY5IDMuNTgyMDMxLTggOC04czggMy41ODIwMzEgOCA4djY0YzAgNC40MTc5NjktMy41ODIwMzEgOC04IDh6bTAgMCIvPjxwYXRoIGQ9Im0yNDAgODBjLTQuNDE3OTY5IDAtOC0zLjU4MjAzMS04LTh2LTY0YzAtNC40MTc5NjkgMy41ODIwMzEtOCA4LThzOCAzLjU4MjAzMSA4IDh2NjRjMCA0LjQxNzk2OS0zLjU4MjAzMSA4LTggOHptMCAwIi8+PHBhdGggZD0ibTEyMCAxMjAtNDgtNDgiLz48cGF0aCBkPSJtMTIwIDEyOGMtMi4xMjEwOTQgMC00LjE1NjI1LS44NDM3NS01LjY1NjI1LTIuMzQzNzVsLTQ4LTQ4Yy0zLjAzMTI1LTMuMTQwNjI1LTIuOTg4MjgxLTguMTI4OTA2LjA5NzY1Ni0xMS4yMTQ4NDQgMy4wODU5MzgtMy4wODU5MzcgOC4wNzQyMTktMy4xMjg5MDYgMTEuMjE0ODQ0LS4wOTc2NTZsNDggNDhjMi4yODUxNTYgMi4yODkwNjIgMi45NzI2NTYgNS43MzA0NjkgMS43MzQzNzUgOC43MTg3NXMtNC4xNTYyNSA0LjkzNzUtNy4zOTA2MjUgNC45Mzc1em0wIDAiLz48cGF0aCBkPSJtNDA4IDQwOC00OC00OCIvPjxwYXRoIGQ9Im00MDggNDE2Yy0yLjEyMTA5NCAwLTQuMTU2MjUtLjg0Mzc1LTUuNjU2MjUtMi4zNDM3NWwtNDgtNDhjLTMuMDMxMjUtMy4xNDA2MjUtMi45ODgyODEtOC4xMjg5MDYuMDk3NjU2LTExLjIxNDg0NCAzLjA4NTkzOC0zLjA4NTkzNyA4LjA3NDIxOS0zLjEyODkwNiAxMS4yMTQ4NDQtLjA5NzY1Nmw0OCA0OGMyLjI4NTE1NiAyLjI4OTA2MiAyLjk3MjY1NiA1LjczMDQ2OSAxLjczNDM3NSA4LjcxODc1cy00LjE1NjI1IDQuOTM3NS03LjM5MDYyNSA0LjkzNzV6bTAgMCIvPjxwYXRoIGQ9Im0zNjAgMTIwIDQ4LTQ4Ii8+PHBhdGggZD0ibTM2MCAxMjhjLTMuMjM0Mzc1IDAtNi4xNTIzNDQtMS45NDkyMTktNy4zOTA2MjUtNC45Mzc1cy0uNTUwNzgxLTYuNDI5Njg4IDEuNzM0Mzc1LTguNzE4NzVsNDgtNDhjMy4xNDA2MjUtMy4wMzEyNSA4LjEyODkwNi0yLjk4ODI4MSAxMS4yMTQ4NDQuMDk3NjU2IDMuMDg1OTM3IDMuMDg1OTM4IDMuMTI4OTA2IDguMDc0MjE5LjA5NzY1NiAxMS4yMTQ4NDRsLTQ4IDQ4Yy0xLjUgMS41LTMuNTM1MTU2IDIuMzQzNzUtNS42NTYyNSAyLjM0Mzc1em0wIDAiLz48cGF0aCBkPSJtNDcyIDI0OGgtNjRjLTQuNDE3OTY5IDAtOC0zLjU4MjAzMS04LThzMy41ODIwMzEtOCA4LThoNjRjNC40MTc5NjkgMCA4IDMuNTgyMDMxIDggOHMtMy41ODIwMzEgOC04IDh6bTAgMCIvPjxwYXRoIGQ9Im03MiAyNDhoLTY0Yy00LjQxNzk2OSAwLTgtMy41ODIwMzEtOC04czMuNTgyMDMxLTggOC04aDY0YzQuNDE3OTY5IDAgOCAzLjU4MjAzMSA4IDhzLTMuNTgyMDMxIDgtOCA4em0wIDAiLz48cGF0aCBkPSJtNzIgNDA4IDQ4LTQ4Ii8+PHBhdGggZD0ibTcyIDQxNmMtMy4yMzQzNzUgMC02LjE1MjM0NC0xLjk0OTIxOS03LjM5MDYyNS00LjkzNzVzLS41NTA3ODEtNi40Mjk2ODggMS43MzQzNzUtOC43MTg3NWw0OC00OGMzLjE0MDYyNS0zLjAzMTI1IDguMTI4OTA2LTIuOTg4MjgxIDExLjIxNDg0NC4wOTc2NTYgMy4wODU5MzcgMy4wODU5MzggMy4xMjg5MDYgOC4wNzQyMTkuMDk3NjU2IDExLjIxNDg0NGwtNDggNDhjLTEuNSAxLjUtMy41MzUxNTYgMi4zNDM3NS01LjY1NjI1IDIuMzQzNzV6bTAgMCIvPjwvZz48L3N2Zz4=" />
+ <h1 class="header-title">MH Weather Site</h1>
 </div>
- <h1>MH Weather Site</h1>
+ 
  <div class="container-navigation">
      <nav>
         <ul>
@@ -29,10 +30,14 @@
      </nav>
  </div> 
 <body>
+    <div class="container">
    <section class="weather-section">
-    <p class="paragraph-weather">Current Condition: <span id="current-condition"></span></p>
-    <p class="paragraph-weather">Temperature: <span id="temp"></span>&deg; F</p>
-    <p class="paragraph-weather">Humidity: <span id="humidity"></span>%</p>
+    <h1 class="paragraph-weather">Weather Today</h1>
+    <p class="paragraph">Current Condition: <span id="current-condition"></span></p>
+    <p class="paragraph">Temperature: <span id="temp"></span>&deg; F</p>
+    <p class="paragraph">Wind Speed: <span id="speed"></span> mph</p>
+    <p class="paragraph">Humidity: <span id="humidity"></span>%</p>
+    <p class="paragraph">WindChill: <span id="windchill"></span></p>
    </section>
 <section class="fiveday-forecast">
     <h3>Five Day Forecast</h3>
@@ -62,19 +67,14 @@
         </tr>
       </table>
 </section>
+</div>
 
-<section class="lates-news">
-    <h3>Lates News</h3>
-</section>
 
 <footer class="footer">
-    <h3>Create by Michell Herrera  </h3><a href="https://www.byui.edu/online">BYU-Idaho Online</a>
-    <div class="container-socialmedia">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-pinterest"></i>
-    </div>
-    
-</footer>
+  <p class="paragraph-footer" >&#9825 2021 | Paola M. Herrera | Honduras |</p> 
+ 
+ </footer>
+<script src="/weather-application/js/weatherB.js"></script>
 </body>
+
 </html>

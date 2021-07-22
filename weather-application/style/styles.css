@@ -1,10 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans:wght@200&display=swap");
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container-logo {
+  background-color: #adb5bd;
+  padding: 1em;
+}
+
 .logo {
-  width: 200px;
+  width: 60px;
+  padding-left: 0.5em;
+  padding-top: 1em;
 }
 
 .header-title {
+  float: left;
+  font-family: "Amatic SC", cursive;
+  font-size: 2em;
+}
+
+nav {
+  font-size: 1.5em;
+  background-color: #033246;
   font-family: "Josefin Sans", sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.8rem 2%;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: #C4DEF6;
+}
+
+.container {
+  margin: 2em;
+  margin-left: 1em;
+}
+
+section .paragraph-weather {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5em;
+}
+section .paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5em;
+}
+
+.weather-section {
+  background-color: #66A5AD;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+div#five-day {
+  display: block;
+}
+
+img.iconTable {
+  width: 5em;
+  padding: 2em;
+  margin-left: 2em;
+}
+
+.color-table {
+  background-color: #66A5AD;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+
+.fiveday-forecast {
+  max-width: 100%;
+}
+
+.paragraph-forecast {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.fiveday-forecast {
+  margin-left: 20em;
+}
+
+.paragraph-footer {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.footer {
+  background-color: #adb5bd;
+  padding: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */
