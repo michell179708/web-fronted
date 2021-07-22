@@ -1,0 +1,73 @@
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+.TwoColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.People {
+    text-align: left;
+}
+
+.Person {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em;
+    padding: 0.5em;
+    background-color: rgb(255, 249, 241);
+    border-radius: 0.5em;
+    box-shadow: rgb(184, 175, 164) 1px 1px 3px;
+}
+
+.PersonAttribute {
+    text-align: left;
+}
+
+.Nav {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin: 5%;
+}
+
+.Previous {
+    grid-column-start: 1;
+}
+
+.Home {
+    grid-column-start: 2;
+}
+
+.Next {
+    grid-column-start: 3;
+}
+
+.NavButton {
+    border: black;
+    border-radius: 1em;
+    font-weight: bolder;
+    appearance: inherit;
+    font-size: inherit;
+    transform: scale(0.92);
+    transition: 0.2s;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.NavButton:hover {
+    background: rgb(221, 221, 117);
+    transform: scale(0.95);
+    transition: 0.2s;
+}
+
+.PageButtons {
+    display: flex;
+    justify-content: space-evenly;
+
+}
